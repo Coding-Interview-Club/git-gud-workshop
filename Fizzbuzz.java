@@ -6,21 +6,23 @@ class Fizzbuzz {
     public static void fizzBuzz(int n) {
         for (int i = 1; i <= n; i++) {
 
-          if (isXMultipleOfY(i, 3) == true)
+          if((isXMultipleOfY(i, 3) == true) && (isXMultipleOfY(i, 5) == true))
           {
             // Prints fizz
-            System.out.print("Fizz");
+            System.out.println("FizzBuzz");
           }
 
-              if(isXMultipleOfY(i, 5) == true){
+          else if(isXMultipleOfY(i, 5) == true){
                 // Prints buzz
-                System.out.print("Buzz");
+                System.out.println("Buzz");
               }
 
-          if ((isXMultipleOfY(i, 3) == true) && (isXMultipleOfY(i, 5) == true)) {
-            System.out.println(i); // prints i
+          else if(isXMultipleOfY(i, 3)== true){
+            System.out.println("Fizz"); // prints i
           }
-          System.out.println();
+          else{
+            System.out.println(i);
+          }
         }
     }
 

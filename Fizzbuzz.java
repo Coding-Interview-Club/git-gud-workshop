@@ -1,39 +1,26 @@
-class Fizzbuzz {
-  // I am on the testing branch
-    // If x is divisible by 2, print "fizz"
-    // If x is divisible by 3, print "buzz"
-    // If it's divisible by both, print x
-    public static void fizzBuzz(int n) {
-        for (int i = 1; i <= n; i++) {
+import java.util.Scanner;
 
-          if((isXMultipleOfY(i, 3) == true) && (isXMultipleOfY(i, 5) == true))
-          {
-            // Prints fizz
-            System.out.println("FizzBuzz");
-          }
+class Fizzbuzz{
+  public static void fizzBuzz(int n) {
+    for (int i = 1; i <= n; i++) {
 
-          else if(isXMultipleOfY(i, 5) == true){
-                // Prints buzz
-                System.out.println("Buzz");
-              }
-
-          else if(isXMultipleOfY(i, 3)== true){
-            System.out.println("Fizz"); // prints i
-          }
-          else{
-            System.out.println(i);
-          }
-        }
+      if(((i % 3) == 0) && ((i % 5) == 0)){
+        System.out.println("FizzBuzz");
+      }else if((i % 5) == 0){
+        System.out.println("Buzz");
+      }else if((i % 3)== 0){
+        System.out.println("Fizz");
+      }else{
+        System.out.println(i);
+      }
     }
+  }
+  public static void main(String[] args){
+    Scanner scan = new Scanner(System.in);
 
-    public static boolean isXMultipleOfY(int x, int y) {
-        for (int i = 0; i <= x; i += y)
-          if (i == x)
-              return true;
-        return false;
-    }
-
-    public static void main(String[] args) {
-        fizzBuzz(20);
-    }
+    System.out.println("Hello!");
+    System.out.println("Up to which number you want to play?");
+    int n = scan.nextInt();
+    fizzBuzz(n);
+  }
 }

@@ -1,35 +1,41 @@
 class Fizzbuzz {
   // I am on the testing branch
-    // If x is divisible by 2, print "fizz"
-    // If x is divisible by 3, print "buzz"
-    // If it's divisible by both, print x
+    // If x is divisible by 3, print "fizz"
+    // If x is divisible by 5, print "buzz"
+    // If it's divisible by both, print "fizzBuzz"
     public static void fizzBuzz(int n) {
         for (int i = 1; i <= n; i++) {
 
-          if((isXMultipleOfY(i, 3) == true) && (isXMultipleOfY(i, 5) == true))
+          if(isXMultipleOfY(i, 3) && isXMultipleOfY(i, 5))
           {
-            // Prints fizz
+            // Prints fizzbuzz
             System.out.println("FizzBuzz");
           }
 
-          else if(isXMultipleOfY(i, 5) == true){
-                // Prints buzz
-                System.out.println("Buzz");
-              }
-
-          else if(isXMultipleOfY(i, 3)== true){
-            System.out.println("Fizz"); // prints i
+          else if(isXMultipleOfY(i, 5))
+          {
+            // Prints buzz
+            System.out.println("Buzz");
           }
-          else{
+
+          else if(isXMultipleOfY(i, 3))
+          {
+                // Prints Fizz
+            System.out.println("Fizz");
+          }
+
+          else
+          {
+            // prints i
             System.out.println(i);
           }
         }
     }
 
     public static boolean isXMultipleOfY(int x, int y) {
-        for (int i = 0; i <= x; i += y)
-          if (i == x)
+          if (x % y == 0){
               return true;
+          }
         return false;
     }
 

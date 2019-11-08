@@ -1,23 +1,21 @@
 class Fizzbuzz {
-  // I am on the testing branch
+    // I am on the testing branch
     // If x is divisible by 2, print "fizz"
-    // If x is divisible by 3, print "buzz"
-    // If it's divisible by both, print x
-    public static void fizzBuzz(int n) {
+    public static void fizzBuzz(int n){
         for (int i = 1; i <= n; i++) {
-
-          if((isXMultipleOfY(i, 3) == true) && (isXMultipleOfY(i, 5) == true))
+            // If it's divisible by both, print FizzBuzz
+          if((isXMultipleOfY(i, 3)) && (isXMultipleOfY(i, 5)))
           {
             // Prints fizz
             System.out.println("FizzBuzz");
           }
-
-          else if(isXMultipleOfY(i, 5) == true){
+          // If x is divisible by 5, print "Buzz"
+          else if(isXMultipleOfY(i, 5)){
                 // Prints buzz
                 System.out.println("Buzz");
               }
-
-          else if(isXMultipleOfY(i, 3)== true){
+          // If x is divisible by 3, print "Fuzz"
+          else if(isXMultipleOfY(i, 3)){
             System.out.println("Fizz"); // prints i
           }
           else{
